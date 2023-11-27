@@ -1,0 +1,9 @@
+.vscode
+type-chalenges
+*.txt
+out
+*.out
+.DS_Store
+**/type-chalenges
+/type-challenges/
+type-challenges/
