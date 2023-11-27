@@ -4,7 +4,7 @@
 
 ### 1. Разминка по предыдущим тренировкам.
 
-[Задачи](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up) - [Тестирующая система](https://contest.yandex.ru/contest/53029/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53029/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up)
 
 -   Два указателя,
 -   динамическое программирование,
@@ -12,7 +12,7 @@
 
 ### 2. Тема сортировки
 
-[Сортировки (sort)](https://github.com/AparinAA/yandex-algo-train4/tree/master/sort) - [https://contest.yandex.ru/contest/53029/problems/](https://contest.yandex.ru/contest/53029/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53029/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/sort)
 
 -   Функция partition,
 -   быстрая сортировка,
@@ -21,7 +21,7 @@
 
 ### 3. Хеширование строк и сравнение строк за $O(1)$
 
-[Хэши строк (hashStr)](https://github.com/AparinAA/yandex-algo-train4/tree/master/hashStr) - [https://contest.yandex.ru/contest/53030/problems/](https://contest.yandex.ru/contest/53030/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53030/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/hashStr)
 
 -   Хеш-функция строки,
 -   поиск подстроки в строке за $O(n)$,
@@ -29,18 +29,18 @@
 
 ### 4. Алгоритм Дейкстры
 
-[Кратчайшие пути в графах (graphs)](https://github.com/AparinAA/yandex-algo-train4/tree/master/graphs) - [https://contest.yandex.ru/contest/53031/problems/](https://contest.yandex.ru/contest/53031/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53031/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/graphs)
 
 -   Алгоритм Дейкстры за $O(V^2)$,
 -   Алгоритм Дейкстры за $O(ElogV)$
 
 ### 5. Алгоритмы перебора
 
-[Перебор (backtracking)](https://github.com/AparinAA/yandex-algo-train4/tree/master/backtracking) - [https://contest.yandex.ru/contest/53032/problems/](https://contest.yandex.ru/contest/53032/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53032/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/backtracking)
 
 -   Перебор: N-ферзей,
 -   генерация правильной скобочной последовательности
 
 ### 6. Финальный забег
 
-[Финал (только 2 задачи) - final](https://github.com/AparinAA/yandex-algo-train4/tree/master/final) - [https://contest.yandex.ru/contest/53033/problems/](https://contest.yandex.ru/contest/53033/problems/)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53033/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/final)
