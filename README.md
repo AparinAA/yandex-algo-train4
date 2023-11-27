@@ -6,9 +6,9 @@
 
 [Разминка (warm-up)](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up) - [https://contest.yandex.ru/contest/53027/problems/](https://contest.yandex.ru/contest/53029/problems/)
 
-    - Два указателя,
-    - динамическое программирование,
-    - DFS/BFS,
+-   Два указателя,
+-   динамическое программирование,
+-   DFS/BFS,
 
 2. [Сортировки (sort)](https://github.com/AparinAA/yandex-algo-train4/tree/master/sort) - [https://contest.yandex.ru/contest/53029/problems/](https://contest.yandex.ru/contest/53029/problems/)
 
