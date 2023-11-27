@@ -10,14 +10,14 @@
 -   динамическое программирование,
 -   DFS/BFS,
 
-2. [Сортировки (sort)](https://github.com/AparinAA/yandex-algo-train4/tree/master/sort) - [https://contest.yandex.ru/contest/53029/problems/](https://contest.yandex.ru/contest/53029/problems/)
+### 2. Тема сортировки
 
-    ### Тема сортировки
+[Сортировки (sort)](https://github.com/AparinAA/yandex-algo-train4/tree/master/sort) - [https://contest.yandex.ru/contest/53029/problems/](https://contest.yandex.ru/contest/53029/problems/)
 
-    - Функция partition,
-    - быстрая сортировка,
-    - сортировка слиянием,
-    - битовая сортировка
+-   Функция partition,
+-   быстрая сортировка,
+-   сортировка слиянием,
+-   битовая сортировка
 
 3. [Хэши строк (hashStr)](https://github.com/AparinAA/yandex-algo-train4/tree/master/hashStr) - [https://contest.yandex.ru/contest/53030/problems/](https://contest.yandex.ru/contest/53030/problems/)
 
