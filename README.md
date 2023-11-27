@@ -2,9 +2,9 @@
 
 Папка с решениями - условия задач
 
-1. [Разминка (warm-up)](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up) - [https://contest.yandex.ru/contest/53027/problems/](https://contest.yandex.ru/contest/53029/problems/)
+1. ### Разминка по предыдущим тренировкам.
 
-    ### Разминка по предыдущим тренировкам.
+[Разминка (warm-up)](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up) - [https://contest.yandex.ru/contest/53027/problems/](https://contest.yandex.ru/contest/53029/problems/)
 
     - Два указателя,
     - динамическое программирование,
