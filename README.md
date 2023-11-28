@@ -4,7 +4,7 @@
 
 ### 1. Разминка по предыдущим тренировкам.
 
-[Условия и тестирующая система](https://contest.yandex.ru/contest/53029/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up)
+[Условия и тестирующая система](https://contest.yandex.ru/contest/53027/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/warm-up)
 
 -   Два указателя,
 -   динамическое программирование,
