@@ -1,3 +1,23 @@
+function dijkstra(paths, dist, prev, visited, v, s) {
+	let q = [s - 1];
+	while (q.length) {
+		const temp = q.pop();
+		for (let i = 0; i < v; i++) {
+			if (i !== temp && paths[temp][i] > -1) {
+				if (dist[i] > dist[temp] + paths[temp][i]) {
+					dist[i] = dist[temp] + paths[temp][i];
+					prev[i] = temp;
+				}
+			}
+			if (!visited[i]) {
+				q.push(i);
+			}
+		}
+
+		visited[temp] = 1;
+	}
+}
+
 function solution(data) {
 	// parse data
 	let [parms, ...paths] = data.trim().split("\n");
@@ -17,29 +37,13 @@ function solution(data) {
 	visited[s - 1] = 1;
 	prev[s - 1] = -1;
 
-	let q = [s - 1];
-	while (q.length) {
-		const temp = q.pop();
-		for (let i = 0; i < v; i++) {
-			if (i !== temp && paths[temp][i] > -1) {
-				if (dist[i] > dist[temp] + paths[temp][i]) {
-					dist[i] = dist[temp] + paths[temp][i];
-					prev[i] = temp;
-				}
-			}
-			if (!visited[i]) {
-				q.push(i);
-			}
-		}
-
-		visited[temp] = 1;
-	}
+	dijkstra(paths, dist, prev, visited, v, s);
 
 	if (!isFinite(dist[f - 1])) {
 		return -1;
 	}
 
-	q = f - 1;
+	let q = f - 1;
 
 	let result = [];
 

@@ -1,3 +1,22 @@
+const _x = 491n;
+const MOD = 100000000000007n;
+
+function calcHashOfStr(h, x, s) {
+	const k = s.length;
+
+	for (let i = 1; i < k + 1; i++) {
+		h[i] = (h[i - 1] * _x + BigInt(s[i - 1].charCodeAt(0) - 96)) % MOD;
+		x[i] = (x[i - 1] * _x) % MOD;
+	}
+}
+
+function isEqual(a, b, len, h, x) {
+	return (
+		(h[a + len] + h[b] * x[len]) % MOD ===
+		(h[b + len] + h[a] * x[len]) % MOD
+	);
+}
+
 function solution(data) {
 	// parse data
 	let [s, n, ...queries] = data.trim().split("\n");
@@ -6,28 +25,15 @@ function solution(data) {
 	queries = queries.map((q) => q.trim().split(" ").map(Number));
 	k = s.length;
 
-	const _x = 491n;
-	const MOD = 100000000000007n;
-
 	const h = new BigUint64Array(k + 1).fill(0n);
 	const x = new BigUint64Array(k + 1).fill(0n);
 	x[0] = 1n;
 
-	for (let i = 1; i < k + 1; i++) {
-		h[i] = (h[i - 1] * _x + BigInt(s[i - 1].charCodeAt(0) - 96)) % MOD;
-		x[i] = (x[i - 1] * _x) % MOD;
-	}
-
-	function isEqual(a, b, len) {
-		return (
-			(h[a + len] + h[b] * x[len]) % MOD ===
-			(h[b + len] + h[a] * x[len]) % MOD
-		);
-	}
+	calcHashOfStr(h, x, s);
 
 	const res = [];
 	for (let [l, a, b] of queries) {
-		res.push(isEqual(a, b, l) ? "yes" : "no");
+		res.push(isEqual(a, b, l, h, x) ? "yes" : "no");
 	}
 
 	return res.join("\n");

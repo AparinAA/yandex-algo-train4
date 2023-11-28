@@ -1,34 +1,35 @@
+//проверка является ли скобочная последовательность правильной
+function check(str) {
+	const q = [];
+	const n = str.length;
+
+	for (let i = 0; i < n; i++) {
+		const c = str[i];
+		if (c[0] == ")" || c[0] == "]") {
+			if (!q.length) {
+				return false;
+			}
+
+			if (
+				(c[0] == ")" && q.at(-1) == "(") ||
+				(c[0] == "]" && q.at(-1) == "[")
+			) {
+				q.pop();
+			} else {
+				return false;
+			}
+		} else {
+			q.push(c);
+		}
+	}
+
+	return !q.length;
+}
+
 function solution(data, stream) {
 	// parse data
 	let [n] = data.trim().split(" ");
 	n = +n;
-
-	function check(str) {
-		const q = [];
-		const n = str.length;
-
-		for (let i = 0; i < n; i++) {
-			const c = str[i];
-			if (c[0] == ")" || c[0] == "]") {
-				if (!q.length) {
-					return false;
-				}
-
-				if (
-					(c[0] == ")" && q.at(-1) == "(") ||
-					(c[0] == "]" && q.at(-1) == "[")
-				) {
-					q.pop();
-				} else {
-					return false;
-				}
-			} else {
-				q.push(c);
-			}
-		}
-
-		return !q.length;
-	}
 
 	if (n === 0) {
 		return "";
@@ -38,6 +39,8 @@ function solution(data, stream) {
 
 	function subgen(result, cur, openC, closedC, openS, closedS) {
 		if (cur.length === n) {
+			//можно обойтись без проверки check(cur),
+			// если чуть-чуть поправить последовательность добавления скобок ")" "]"
 			if (check(cur)) {
 				const str = cur.join("");
 				result.push(str);
@@ -81,14 +84,7 @@ function solution(data, stream) {
 	return result;
 }
 
-// const s = Date.now();
 const fs = require("fs");
 const file = fs.readFileSync("input.txt", "utf8").trim();
-var stream;
-stream = fs.createWriteStream("output.txt");
+let stream = fs.createWriteStream("output.txt");
 result = solution(file, stream);
-// fs.writeFileSync("output.txt", `${result}`);
-// fs.writeFileSync("output.txt", `${"!!!"}`);
-// const e = Date.now() - s;
-
-// console.info(e / 1000);

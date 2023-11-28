@@ -1,39 +1,15 @@
-function solution(data) {
-	// parse data
-	let [n, str] = data.trim().split("\n");
+const MOD = 1000000000007n;
+const _x = 257n;
 
-	n = +n;
-
-	//to do something, here code
-	const MOD = 1000000000007n;
-	const _x = 257n;
-	const hash = new BigUint64Array(n + 1).fill(0n);
-	const hashReverse = new BigUint64Array(n + 1).fill(0n);
-
-	const x = new BigUint64Array(n + 1).fill(0n);
-	x[0] = 1n;
+function calcHashOfStr(hash, hashReverse, x, str) {
+	const n = str.length;
 
 	for (let i = 1; i < n + 1; i++) {
 		hash[i] = (hash[i - 1] * _x + BigInt(str[i - 1].charCodeAt(0))) % MOD;
-
 		hashReverse[i] =
 			(hashReverse[i - 1] * _x + BigInt(str[n - i].charCodeAt(0))) % MOD;
 		x[i] = (x[i - 1] * _x) % MOD;
 	}
-
-	const result = [];
-	for (let i = 0; i < n; i++) {
-		const index = binSearch(i, hash, hashReverse);
-		const check = isEqual(0, n - i - 1, index, hash, hashReverse);
-
-		if (!check) {
-			result.push(0);
-		} else {
-			result.push(index);
-		}
-	}
-
-	return result.join(" ");
 }
 
 function isEqual(a, b, len, hash, hashReverse) {
@@ -58,6 +34,36 @@ function binSearch(i, hash, hashReverse) {
 	}
 
 	return l;
+}
+
+function solution(data) {
+	// parse data
+	let [n, str] = data.trim().split("\n");
+
+	n = +n;
+
+	//to do something, here code
+	const hash = new BigUint64Array(n + 1).fill(0n);
+	const hashReverse = new BigUint64Array(n + 1).fill(0n);
+
+	const x = new BigUint64Array(n + 1).fill(0n);
+	x[0] = 1n;
+
+	calcHashOfStr(hash, hashReverse, x, str);
+
+	const result = [];
+	for (let i = 0; i < n; i++) {
+		const index = binSearch(i, hash, hashReverse);
+		const check = isEqual(0, n - i - 1, index, hash, hashReverse);
+
+		if (!check) {
+			result.push(0);
+		} else {
+			result.push(index);
+		}
+	}
+
+	return result.join(" ");
 }
 
 const fs = require("fs");

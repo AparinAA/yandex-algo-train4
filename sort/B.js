@@ -1,5 +1,3 @@
-let nums;
-
 function partion(nums, left, right, x) {
 	let g = -1;
 	let e = -1;
@@ -61,8 +59,8 @@ function sort(nums, left, right) {
 	return;
 }
 function solution(data) {
-	let [n, arr] = data.trim().split("\n");
-	nums = arr;
+	let [n, nums] = data.trim().split("\n");
+
 	n = +n;
 
 	if (!n) {
@@ -70,18 +68,8 @@ function solution(data) {
 	}
 
 	nums = nums.split(" ").map(Number);
-	let nums1 = [...nums];
 
-	let start1 = Date.now();
 	sort(nums, 0, n - 1);
-	let end1 = Date.now();
-
-	let start2 = Date.now();
-	nums1.sort((a, b) => a - b);
-	let end2 = Date.now();
-
-	console.info(`Time 1: ${(end1 - start1) / 1000}`);
-	console.info(`Time 2: ${(end2 - start2) / 1000}`);
 
 	return nums.join(" ");
 }

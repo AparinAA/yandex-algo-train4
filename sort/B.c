@@ -44,11 +44,7 @@ int main(void)
         return 1;
     }
 
-    // start = clock();
     quickSort(arr, 0, N);
-    // end = clock();
-
-    // printf("The time of the work: %lf", (double)((end - start)));
 
     printToStream(arr, N, out);
 

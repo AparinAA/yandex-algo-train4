@@ -83,23 +83,6 @@ function BFS(start, v, paths, dist, visited, prev) {
 }
 
 function dijkstraToDist(start, paths, dist, visited) {
-	// let q = [start];
-
-	// dist[start] = 0;
-	// while (q.length) {
-	// 	const temp = q.pop();
-
-	// 	visited[temp] = 1;
-	// 	for (let [to, d] of paths[temp]) {
-	// 		if (dist[to] > dist[temp] + d) {
-	// 			dist[to] = dist[temp] + d;
-	// 			if (!visited[to]) {
-	// 				q.push(to);
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 	const heap = new Heap(compare);
 	dist[start] = 0;
 	heap.add([0, start]);

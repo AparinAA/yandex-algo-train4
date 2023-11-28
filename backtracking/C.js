@@ -6,6 +6,7 @@ function solution(data) {
 	matrix = matrix.map((m) => m.trim().split(" ").map(Number));
 
 	//to do something, here code
+	//comming soon...
 }
 const fs = require("fs");
 const file = fs.readFileSync("input.txt", "utf8").trim();

@@ -44,10 +44,8 @@ function solution(data) {
 
 	return stream.join("\n");
 }
+
 const fs = require("fs");
-// const file = fs.readFileSync("input.txt", "utf8").trim();
-const file = fs
-	.readFileSync("/Users/alexaparin/Downloads/15.file", "utf8")
-	.trim();
+const file = fs.readFileSync("input.txt", "utf8").trim();
 result = solution(file);
 fs.writeFileSync("output.txt", `${result}`);

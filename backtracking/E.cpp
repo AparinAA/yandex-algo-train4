@@ -8,6 +8,7 @@
 
 using namespace std;
 
+//проверка является ли скобочная последовательность правильной
 bool check(vector<string> *s) {
 		
     stack<string> q;
@@ -50,6 +51,8 @@ void subgen(vector<string> *result, vector<string> *cur, int openC, int closedC,
     if (cur->size() == n) {
         string str = concatenateFromStack(cur);
         if (openC == closedC && openS == closedS ) {
+            //можно обойтись без проверки check(cur),
+			// если чуть-чуть поправить последовательность добавления скобок ")" "]"
             if ( check(cur) ) {
                 result->push_back(str);
             }
