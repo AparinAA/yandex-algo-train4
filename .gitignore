@@ -10,3 +10,5 @@ type-challenges/
 *create
 templates/
 other
+**/testCustomHeap.js
+**/test.js
