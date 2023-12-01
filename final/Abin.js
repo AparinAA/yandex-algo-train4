@@ -13,9 +13,9 @@ function solution(data) {
 	while (l < r) {
 		const c = Math.floor((l + r + 1) * 0.5);
 
-		let a1 = Math.floor(Math.pow(c, 1 / 2));
-		let a2 = Math.floor(Math.pow(c, 1 / 3));
-		let a3 = Math.floor(Math.pow(c, 1 / 6));
+		const a1 = Math.floor(Math.pow(c, 1 / 2));
+		const a2 = Math.floor(Math.pow(c, 1 / 3));
+		const a3 = Math.floor(Math.pow(c, 1 / 6));
 
 		if (a1 + a2 - a3 < x) {
 			l = c;
@@ -24,10 +24,7 @@ function solution(data) {
 		}
 	}
 
-	if (
-		l - (Math.floor(Math.pow(l, 1 / 2)) + 1) ** 2 <
-		l - (Math.floor(Math.pow(l, 1 / 3)) + 1) ** 3
-	) {
+	if ((Math.pow(l, 1 / 2) + 1) ** 2 > (Math.pow(l, 1 / 3) + 1) ** 3) {
 		return (Math.floor(Math.pow(l, 1 / 3)) + 1) ** 3;
 	} else {
 		return (Math.floor(Math.pow(l, 1 / 2)) + 1) ** 2;
