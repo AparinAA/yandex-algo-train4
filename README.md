@@ -47,3 +47,9 @@
 ### 6. Финальный забег
 
 [Условия и тестирующая система](https://contest.yandex.ru/contest/53033/problems/) - [Решения](https://github.com/AparinAA/yandex-algo-train4/tree/master/final)
+
+-   Линейный поиск/бин поиск,
+-   хэш-функция строки + бинпоиск,
+-   алгоритм Дейкстры + бинпоиск,
+-   перебор всех сумм с помощью алгоритма Meet-in-the-middle
+-   comming soon...
