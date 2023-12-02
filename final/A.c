@@ -1,4 +1,5 @@
 // run 1ms !!!
+// Bin search
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
